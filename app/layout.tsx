@@ -5,14 +5,14 @@ import Script from "next/script";
 
 // Profile data import
 import profile from "../content/profile";
+import { SITE_URL } from "@/lib/site-url";
 
 const displayName = "irsyad dimas";
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
 
 export const metadata: Metadata = {
   title: `${displayName} · ${profile.title ?? "Portfolio"}`,
   description: profile.bio ?? "Portfolio of irsyad dimas",
-  metadataBase: new URL(SITE_URL.replace(/\/$/, "")),
+  metadataBase: new URL(SITE_URL),
   alternates: {
     canonical: "/",
   },
