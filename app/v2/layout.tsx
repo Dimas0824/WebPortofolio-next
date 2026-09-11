@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     description: "Versi baru portofolio — sedang proses.",
     robots: { index: false, follow: true },
 };
-export const viewport: Viewport = { themeColor: "#14303B" };
+export const viewport: Viewport = { themeColor: "#14303B", width: "device-width", initialScale: 1, maximumScale: 10 };
 
 export default function V2Layout({ children }: Readonly<{ children: React.ReactNode }>) {
     return (

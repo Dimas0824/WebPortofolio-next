@@ -4,7 +4,7 @@ function initials(title: string) { return title.split(/[\s\-—–()]+/).map((w)
 
 export default function WorkCard({ work, index, isActive, onHover, shot = null }: { work: PortfolioItem; index: number; isActive: boolean; onHover: (i: number | null) => void; shot?: string | null }) {
     return (
-        <a href={work.link} target="_blank" rel="noopener noreferrer" data-active={isActive} aria-current={isActive}
+        <a href={work.link} target="_blank" rel="noopener noreferrer" data-active={isActive}
             onMouseEnter={() => onHover(index)} onMouseLeave={() => onHover(null)} onFocus={() => onHover(index)} onBlur={() => onHover(null)}
             className="v2-card block shrink-0 grow-0 basis-[78vw] snap-center rounded-[24px] border border-v2-hairline bg-v2-raised p-5 no-underline md:basis-[calc((100%-1.25rem)/2)] lg:basis-[calc((100%-2.5rem)/3)]">
             <h3 className="sr-only">{work.title} — {work.category}. Buka repositori di tab baru.</h3>
@@ -26,7 +26,7 @@ export default function WorkCard({ work, index, isActive, onHover, shot = null }
             {isActive ? (
                 <>
                     <p className="line-clamp-2 mt-2 text-sm leading-relaxed text-v2-muted">{work.description}</p>
-                    <span className="mt-4 inline-flex items-center gap-2 rounded-full bg-v2-coral px-5 py-2.5 font-v2-display text-lg font-black uppercase text-white">View case <span aria-hidden>↗</span></span>
+                    <span className="mt-4 inline-flex items-center gap-2 rounded-full bg-v2-coral px-5 py-2.5 font-v2-display text-xl font-black uppercase text-white">View case <span aria-hidden>↗</span></span>
                 </>
             ) : (
                 <div className="mt-4 flex flex-wrap gap-1.5">

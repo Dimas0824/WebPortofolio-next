@@ -51,7 +51,7 @@ export default function V2Navbar() {
         <>
             <header className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${scrolled || open ? "bg-v2-canvas/90 backdrop-blur-md border-b border-v2-hairline" : "bg-transparent"}`}>
                 <div className="mx-auto flex max-w-[1180px] items-center justify-between px-4 md:px-6" style={{ height: scrolled ? 64 : 84, transition: "height .3s" }}>
-                    <a href="/v2" className="v2-notch bg-v2-ink px-3 py-2 font-v2-mono text-sm font-bold text-v2-canvas" aria-label="irsyad dimas beranda">ID:</a>
+                    <a href="/v2" className="v2-notch bg-v2-ink px-3 py-2 font-v2-mono text-sm font-bold text-v2-canvas" aria-label="ID: beranda Irsyad Dimas">ID:</a>
 
                     <nav aria-label="Navigasi utama" className="hidden lg:flex items-center gap-9">
                         {LINKS.map((l) => (
