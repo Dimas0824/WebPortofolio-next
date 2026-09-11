@@ -2,6 +2,7 @@ import { Big_Shoulders, Plus_Jakarta_Sans, Space_Mono } from "next/font/google";
 import type { Metadata, Viewport } from "next";
 import type React from "react";
 import V2Navbar from "@/components/v2/Navbar";
+import FooterV2 from "@/components/v2/FooterSectionV2";
 import { NoiseLayer } from "@/components/v2/ui";
 
 const display = Big_Shoulders({ subsets: ["latin"], weight: ["700", "800", "900"], variable: "--font-bigshoulders", display: "swap" });
@@ -21,6 +22,7 @@ export default function V2Layout({ children }: Readonly<{ children: React.ReactN
             <NoiseLayer />
             <V2Navbar />
             {children}
+            <FooterV2 />
         </div>
     );
 }
