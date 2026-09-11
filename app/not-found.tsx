@@ -6,7 +6,7 @@ export default function NotFound() {
   return (
     <div className="min-h-screen bg-[#FDFCFB] text-[#1A1A1A] font-sans overflow-hidden selection:bg-[#F2C18D] flex items-center justify-center relative">
       <div
-        className="fixed inset-0 pointer-events-none z-[99] opacity-[0.03] bg-[url('https://grainy-gradients.vercel.app/noise.svg')]"
+        className="noise-overlay fixed inset-0 pointer-events-none z-[99] opacity-[0.03]"
       />
 
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
