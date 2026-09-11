@@ -1,0 +1,169 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #FDFCFB;
+  --color-ink: #1A1A1A;
+  --color-karamel: #C2996B;
+  --color-peach: #F2C18D;
+}
+
+/* Global rules for React app */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #FDFCFB;
+    color: #1A1A1A;
+  }
+
+  ::selection {
+    background-color: rgba(194, 153, 107, 0.3);
+    color: #1A1A1A;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #FDFCFB;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #e3e3e0;
+  border-radius: 100%;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #d0d0d0;
+}
+
+/* Animations from StyleOverrides.tsx */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+/* Load animations for Navbar - matches source: initial={{ y: -100 }} animate={{ y: 0 }} transition={{ duration: 0.8, type: "spring", stiffness: 100, damping: 20 }} */
+@keyframes fade-slide-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px) scaleY(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scaleY(1);
+  }
+}
+
+.animate-fade-slide-in {
+  animation: fade-slide-in 0.8s ease-out forwards;
+}
+
+/* Hero content animations */
+@keyframes fade-slide-in-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-slide-in-left {
+  animation: fade-slide-in-left 0.8s ease-out forwards;
+  opacity: 0; /* start hidden until animation kicks in */
+}
+
+@keyframes fade-scale-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.85) rotate(-5deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+  }
+}
+
+.animate-fade-scale-in {
+  animation: fade-scale-in 1s ease-out forwards;
+  opacity: 0; /* start hidden until animation kicks in */
+}
+
+@keyframes scale-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-scale-up {
+  animation: scale-up 0.8s ease-out forwards;
+  opacity: 0; /* start hidden until animation kicks in */
+}
+
+@keyframes opacity-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-opacity-in {
+  animation: opacity-in 0.5s ease-out forwards;
+  opacity: 0; /* start hidden until animation kicks in */
+}
+
+/* Button hover animation - replaces whileHover={{ scale: 1.05 }} */
+@keyframes button-hover {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+}
+
+.animate-button-hover {
+  transition: transform 0.2s ease;
+}
+
+.animate-button-hover:hover {
+  animation: button-hover 0.3s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .animate-marquee {
+    animation: none !important;
+    transform: none !important;
+  }
+}
