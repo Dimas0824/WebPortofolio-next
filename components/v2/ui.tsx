@@ -18,7 +18,7 @@ export function NoiseLayer() {
     // stipple global — reuse class .noise-overlay yang SUDAH ada di globals.css (no edit file lama)
     return <div aria-hidden className="noise-overlay pointer-events-none fixed inset-0 z-[60] opacity-[0.04]" />;
 }
-const MASKOT_SRC = "/images/profile/maskot.svg";
+const MASKOT_SRC = "/images/v2/maskot.png";
 export function V2Maskot({ className = "", alt = "Maskot 3D Irsyad Dimas berdiri membawa laptop", priority = false, flip = false }: { className?: string; alt?: string; priority?: boolean; flip?: boolean }) {
     return (
         <img src={MASKOT_SRC} alt={alt} width={466} height={834}
