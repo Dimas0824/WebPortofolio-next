@@ -18,7 +18,7 @@ export const viewport: Viewport = { themeColor: "#14303B", width: "device-width"
 
 export default function V2Layout({ children }: Readonly<{ children: React.ReactNode }>) {
     return (
-        <div className={`${display.variable} ${sans.variable} ${mono.variable} v2-root font-v2-body min-h-screen overflow-x-clip`}>
+        <div className={`${display.variable} ${sans.variable} ${mono.variable} v2-root v2-silk font-v2-body min-h-screen overflow-x-clip`}>
             <NoiseLayer />
             <V2Navbar />
             {children}
