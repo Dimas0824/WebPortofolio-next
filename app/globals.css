@@ -206,12 +206,34 @@
 .v2-reel { scrollbar-width: none; }
 .v2-reel::-webkit-scrollbar { display: none; }
 
-.v2-card { opacity: 1; transform: translateY(10px) scale(0.955); transition: opacity .3s, transform .3s, background-color .3s, box-shadow .3s, border-color .3s; }
-.v2-card[data-active="true"] { transform: translateY(-12px) scale(1.03); background: var(--color-v2-active); border-color: transparent; box-shadow: 0 20px 40px rgba(0,0,0,.25); }
-.v2-card[data-active="true"] .text-v2-sun, .v2-card[data-active="true"] .text-v2-muted { color: var(--color-v2-ink); }
-/* ponytail: a11y floor > spec §6.4 opacity-dim — dimming sibling kini via scale+border+tonal, bukan opacity (blended text gagal AA) */
-
 @media (prefers-reduced-motion: reduce) {
-  .v2-card, .v2-card[data-active="true"] { transform: none; }
   .v2-float, .v2-marquee-track { animation: none; }
+}
+
+/* ─── v2 revisi (addendum 2026-09-12) ─── */
+.v2-silk {
+  background-color: var(--color-v2-canvas);
+  background-image:
+    radial-gradient(62% 44% at 14% 10%, rgba(96, 152, 168, 0.10), transparent 62%),
+    radial-gradient(48% 36% at 86% 16%, rgba(122, 172, 186, 0.07), transparent 66%),
+    radial-gradient(74% 52% at 50% 108%, rgba(48, 100, 116, 0.12), transparent 60%),
+    radial-gradient(30% 80% at 68% 45%, rgba(28, 66, 80, 0.35), transparent 70%),
+    linear-gradient(116deg, transparent 40%, rgba(130, 178, 190, 0.045) 47%, transparent 54%),
+    linear-gradient(-22deg, transparent 58%, rgba(96, 148, 162, 0.05) 66%, transparent 73%);
+}
+/* semua layer alpha<=.12 dalam rentang canvas #14303B -8%..+9% luminance → lipatan silk almost-imperceptible (Rev1) */
+.v2-band {
+  background: linear-gradient(180deg, #fcc93f 0%, #fbc02d 55%, #e8ae1c 100%);
+  box-shadow: 0 10px 30px rgba(251, 192, 45, 0.10), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+.v2-hcard { position: relative; transition: transform .3s ease, box-shadow .3s ease; }
+.v2-hcard:hover, .v2-hcard:focus-visible { transform: translateY(-6px) scale(1.03); box-shadow: 0 24px 48px rgba(0,0,0,.32); z-index: 10; }
+.v2-reveal { opacity: 0; transform: translateY(10px); transition: opacity .3s ease .04s, transform .3s ease .04s; pointer-events: none; }
+.v2-hcard:hover .v2-reveal, .v2-hcard:focus-within .v2-reveal, .v2-hcard:focus-visible .v2-reveal { opacity: 1; transform: translateY(0); pointer-events: auto; }
+@keyframes v2-shine { 0% { background-position: -140% 0; } 100% { background-position: 240% 0; } }
+.v2-shine { background-image: linear-gradient(100deg, transparent 40%, rgba(255,255,255,.42) 50%, transparent 60%); background-size: 220% 100%; animation: v2-shine 1.6s linear infinite; }
+@media (prefers-reduced-motion: reduce) {
+  .v2-hcard:hover, .v2-hcard:focus-visible { transform: none; }
+  .v2-shine { animation: none; background-image: none; }
+  .v2-reveal { transition: opacity .01ms; transform: none; }
 }
