@@ -233,7 +233,7 @@
 @keyframes v2-shine { 0% { background-position: -140% 0; } 100% { background-position: 240% 0; } }
 .v2-shine { background-image: linear-gradient(100deg, transparent 40%, rgba(255,255,255,.42) 50%, transparent 60%); background-size: 220% 100%; animation: v2-shine 1.6s linear infinite; }
 @media (prefers-reduced-motion: reduce) {
-  .v2-hcard:hover, .v2-hcard:focus-visible { transform: none; }
+  .v2-hcard:hover, .v2-hcard:focus-visible { transform: translateY(-8px) scale(1.05); transition-duration: 0s; }
   .v2-shine { animation: none; background-image: none; }
   .v2-reveal { transition: opacity .01ms; transform: none; }
 }
