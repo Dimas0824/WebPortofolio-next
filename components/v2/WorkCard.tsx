@@ -5,7 +5,7 @@ function initials(title: string) { return title.split(/[\s\-—–()]+/).map((w)
 export default function WorkCard({ work, index, shot = null }: { work: PortfolioItem; index: number; shot?: string | null }) {
     return (
         <a href={work.link} target="_blank" rel="noopener noreferrer"
-            className="v2-hcard group block shrink-0 grow-0 basis-[78vw] snap-center rounded-[24px] border border-v2-hairline bg-v2-raised p-5 no-underline md:basis-[calc((100%-1.25rem)/2)] lg:basis-[calc((100%-2.5rem)/3)]"
+            className="v2-hcard group block shrink-0 grow-0 basis-[58vw] snap-center rounded-[24px] border border-v2-hairline bg-v2-raised p-5 no-underline md:basis-[calc((100%-2.5rem)/3)] lg:basis-[calc((100%-3.75rem)/4)]"
             title={work.title}>
             <h3 className="sr-only">{work.title} — {work.category}. {work.description} Buka repositori di tab baru.</h3>
             <div className="flex items-start justify-between gap-2">
@@ -23,7 +23,7 @@ export default function WorkCard({ work, index, shot = null }: { work: Portfolio
                     <span className="v2-shine mt-3 inline-flex items-center gap-2 rounded-full bg-v2-coral px-4 py-2 font-v2-display text-base font-black uppercase text-white">View project <span aria-hidden>↗</span></span>
                 </div>
             </div>
-            <p className="mt-5 truncate font-v2-display text-[26px] font-bold uppercase leading-none text-v2-ink">{work.title}</p>
+            <p className="mt-5 truncate font-v2-display text-[22px] font-bold uppercase leading-none text-v2-ink">{work.title}</p>
             <div className="mt-4 flex flex-wrap gap-1.5">
                 {work.tech.slice(0, 3).map((t) => (<span key={t} className="rounded-full border border-v2-hairline px-2.5 py-1 font-v2-mono text-[10px] uppercase text-v2-muted">{t}</span>))}
             </div>
