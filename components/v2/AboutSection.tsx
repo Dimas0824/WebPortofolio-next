@@ -7,7 +7,7 @@ export default function AboutSection({ profile }: { profile: Profile }) {
             <div className="mx-auto max-w-[1180px] px-4 md:px-6">
                 <div className="mb-10">
                     <p className="font-v2-mono text-xs uppercase tracking-[.2em] text-v2-sun">03 / ABOUT</p>
-                    <h2 className="mt-3 font-v2-display text-5xl font-bold uppercase md:text-6xl">Halo, kerja beneran?</h2>
+                    <h2 className="mt-3 font-v2-display text-5xl font-bold uppercase md:text-6xl">Tentang saya</h2>
                 </div>
                 <div className="grid gap-8 rounded-[24px] bg-v2-raised p-6 md:grid-cols-[40%_1fr] md:p-10">
                     <div className="relative">
@@ -15,7 +15,11 @@ export default function AboutSection({ profile }: { profile: Profile }) {
                         <img src={photo} alt={`Foto ${profile.name}`} width={800} height={1000} loading="lazy" className="aspect-[4/5] w-full rounded-[16px] border-2 border-v2-ink object-cover" />
                     </div>
                     <div className="flex flex-col justify-center">
-                        <p className="mt-1 max-w-xl leading-relaxed text-v2-muted">{profile.bio}</p>
+                        <p className="mt-1 max-w-xl leading-relaxed text-v2-muted">
+                            Saya Irsyad — anak Informatika yang lebih sibuk mikirin solusinya daripada nulis kodenya.
+                            Harian saya: aplikasi web, sistem internal, dan ngulik data sampai kebaca.
+                            Sisanya ngobrol aja di bawah.
+                        </p>
                         <hr className="my-6 h-px w-10 border-0 bg-v2-hairline" aria-hidden />
                         {profile.philosophy && <blockquote className="font-v2-display text-2xl font-bold uppercase leading-tight text-v2-ink md:text-3xl">&ldquo;{profile.philosophy}&rdquo;</blockquote>}
                         <p className="mt-4 font-v2-mono text-[10px] uppercase tracking-[.2em] text-v2-muted">{profile.title}</p>
