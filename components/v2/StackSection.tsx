@@ -1,22 +1,35 @@
-export default function StackSection({ groups }: { groups: { category: string; items: string[] }[] }) {
+import { Brain, Code, Database, Wrench } from "lucide-react";
+import type { ExpertiseGroup } from "@/content/types";
+
+const META: Record<string, { icon: typeof Code; tag: string }> = {
+    "Languages & Frameworks": { icon: Code, tag: "code" },
+    "Database Management": { icon: Database, tag: "data" },
+    "Machine Learning & Data Science": { icon: Brain, tag: "ml" },
+    "Tools & Platforms": { icon: Wrench, tag: "tools" },
+};
+
+export default function StackSection({ groups }: { groups: ExpertiseGroup[] }) {
+    const seen = new Map<string, string>(); // last-wins → TF/Keras jatuh ke tag "ml" (akurat)
+    for (const g of groups) for (const x of g.items) seen.set(x, g.category);
+    const rows = [...seen].map(([name, group]) => ({ name, group }));
     return (
         <section id="stack" className="py-24">
-            <div className="mx-auto max-w-[1180px] px-4 md:px-6">
-                <div className="mb-10">
-                    <p className="font-v2-mono text-xs uppercase tracking-[.2em] text-v2-sun">02 / STACK</p>
-                    <h2 className="mt-3 font-v2-display text-5xl font-bold uppercase md:text-6xl">Tool yang dipegang</h2>
-                </div>
-                <div className="grid gap-5 sm:grid-cols-2">
-                    {groups.map((g, i) => (
-                        <div key={g.category} className="rounded-[24px] border border-v2-hairline bg-v2-raised p-6">
-                            <span aria-hidden className="font-v2-display text-6xl font-black leading-none text-transparent [-webkit-text-stroke:1px_#fbc02d]">{String(i + 1).padStart(2, "0")}</span>
-                            <h3 className="mt-4 text-lg font-extrabold tracking-tight text-v2-ink">{g.category}</h3>
-                            <ul className="mt-3 flex flex-wrap gap-1.5">
-                                {g.items.map((x) => <li key={x} className="rounded-full border border-v2-hairline px-2.5 py-1 font-v2-mono text-[11px] uppercase text-v2-muted">{x}</li>)}
-                            </ul>
-                        </div>
-                    ))}
-                </div>
+            <div className="mx-auto max-w-[760px] px-4 md:px-6">
+                <p className="font-v2-mono text-xs uppercase tracking-[.2em] text-v2-sun">02 / STACK</p>
+                <h2 className="mt-3 mb-8 font-v2-display text-5xl font-bold uppercase md:text-6xl">Tool yang dipegang</h2>
+                <ul className="divide-y divide-v2-hairline border-y border-v2-hairline">
+                    {rows.map((r) => {
+                        const m = META[r.group] ?? { icon: Code, tag: r.group };
+                        const Icon = m.icon;
+                        return (
+                            <li key={`${r.group}-${r.name}`} className="flex items-center gap-4 py-3">
+                                <Icon className="h-4 w-4 shrink-0 text-v2-sun" aria-hidden />
+                                <span className="font-v2-mono text-[13px] uppercase tracking-[.08em] text-v2-ink">{r.name}</span>
+                                <span className="ml-auto font-v2-mono text-[9px] uppercase tracking-[.2em] text-v2-muted">{m.tag}</span>
+                            </li>
+                        );
+                    })}
+                </ul>
             </div>
         </section>
     );
