@@ -36,7 +36,7 @@ export default function WorksReel({ works, shots = [] }: { works: PortfolioItem[
                 </div>
                 <p className="hidden font-v2-mono text-[10px] uppercase tracking-[.2em] text-v2-muted md:block">← scroll / drag →</p>
             </div>
-            <div ref={ref} tabIndex={0} onKeyDown={onKeyDown} role="group" aria-label="Daftar proyek — gulir atau tekan tombol panah" className="v2-reel mx-auto -my-6 flex max-w-[1180px] gap-5 overflow-x-auto px-1 py-6 snap-x snap-mandatory outline-none">
+            <div ref={ref} tabIndex={0} onKeyDown={onKeyDown} role="group" aria-label="Daftar proyek — gulir atau tekan tombol panah" className="v2-reel mx-auto -my-20 flex max-w-[1180px] gap-5 overflow-x-auto px-14 py-20 snap-x snap-mandatory outline-none md:px-14">
                 {works.map((w, i) => (<WorkCard key={w.title} work={w} index={i} shot={shots[i] ?? null} />))}
             </div>
         </section>

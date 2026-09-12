@@ -40,7 +40,7 @@ export default [
     },
     {
         title: "DiscipLink V2 — Secure MVC Refactor",
-        description: "Refactor arsitektur DiscipLink dengan pola MVC + Request Handler + Central Router untuk memisahkan alur halaman, aksi, dan akses data. Fokus pada hardening keamanan melalui tokenisasi ID sensitif, token crypto dengan session binding, idle session timeout, upload/download whitelist, serta standarisasi feedback UI, error handling HTML/JSON, dan SEO header management.",
+        description: "Refactor arsitektur DiscipLink dengan pola MVC + Central Router untuk memisahkan alur halaman, aksi, dan akses data. Fokus hardening keamanan: tokenisasi ID sensitif dengan session binding, idle timeout, dan whitelist upload/download.",
         tech: ["PHP Native", "PDO", "MySQL", "MVC", "Vanilla JS", "Security"],
         link: "https://github.com/Dimas0824/TataTertibMhsV2.git",
         category: "Security",
