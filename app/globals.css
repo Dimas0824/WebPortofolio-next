@@ -226,14 +226,17 @@
   background: linear-gradient(180deg, #fcc93f 0%, #fbc02d 55%, #e8ae1c 100%);
   box-shadow: 0 10px 30px rgba(251, 192, 45, 0.10), inset 0 1px 0 rgba(255, 255, 255, 0.35);
 }
+.v2-root { --v2-zoom: 2; } /* <-- SATU-SATUNYA ANGKA YANG KAMU UBAH buat besar kecil zoom hover kartu (2 = 200%) */
 .v2-hcard { position: relative; transition: transform .3s ease, box-shadow .3s ease; }
-.v2-hcard:hover, .v2-hcard:focus-visible { transform: translateY(-8px) scale(1.05); box-shadow: 0 28px 56px rgba(0,0,0,.38); z-index: 10; }
+.v2-hcard:hover, .v2-hcard:focus-visible { transform: translateY(-24px) scale(var(--v2-zoom)); box-shadow: 0 28px 56px rgba(0,0,0,.38); z-index: 10; }
+/* ponytail: scale besar ke-potong overflow scroll-reel; saat ada hover, reel dilepas jadi visible (keyboard focus ikut) */
+.v2-reel:has(.v2-hcard:hover), .v2-reel:has(.v2-hcard:focus-within) { overflow: visible; }
 .v2-reveal { opacity: 0; transform: translateY(10px); transition: opacity .3s ease .04s, transform .3s ease .04s; pointer-events: none; }
 .v2-hcard:hover .v2-reveal, .v2-hcard:focus-within .v2-reveal, .v2-hcard:focus-visible .v2-reveal { opacity: 1; transform: translateY(0); pointer-events: auto; }
 @keyframes v2-shine { 0% { background-position: -140% 0; } 100% { background-position: 240% 0; } }
 .v2-shine { background-image: linear-gradient(100deg, transparent 40%, rgba(255,255,255,.42) 50%, transparent 60%); background-size: 220% 100%; animation: v2-shine 1.6s linear infinite; }
 @media (prefers-reduced-motion: reduce) {
-  .v2-hcard:hover, .v2-hcard:focus-visible { transform: translateY(-8px) scale(1.05); transition-duration: 0s; }
+  .v2-hcard:hover, .v2-hcard:focus-visible { transform: translateY(-24px) scale(var(--v2-zoom)); transition-duration: 0s; }
   .v2-shine { animation: none; background-image: none; }
   .v2-reveal { transition: opacity .01ms; transform: none; }
 }
