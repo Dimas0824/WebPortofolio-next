@@ -27,7 +27,7 @@ export default function ContactBanner() {
                     </div>
                     <div className="relative flex flex-col items-center">
                         <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-v2-hairline px-4 py-2 font-v2-mono text-[11px] uppercase text-v2-muted"><span className="h-2 w-2 animate-pulse rounded-full bg-v2-coral" aria-hidden />Open to work &amp; collaboration</span>
-                        <V2Maskot flip alt="Maskot melambaikan tangan (versi cermin)" className="w-[min(36vw,190px)] v2-float" />
+                        <V2Maskot flip alt="Maskot melambaikan tangan (versi cermin)" className="w-[min(30vw,150px)] v2-float" />
                         <div className="mt-4 grid grid-cols-4 gap-3">
                             {TILES.filter((t) => t.href).map(({ href, label, Icon }) => (
                                 <a key={label} href={href} target={label === "Email" ? undefined : "_blank"} rel={label === "Email" ? undefined : "noopener noreferrer"} aria-label={label}

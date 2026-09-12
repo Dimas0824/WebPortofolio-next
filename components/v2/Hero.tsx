@@ -17,7 +17,7 @@ export default function V2Hero() {
                 </div>
                 <div aria-hidden className="flex flex-col items-center gap-2 md:hidden">
                     <span className="font-v2-display font-black uppercase leading-[.82] text-v2-ink text-[clamp(3rem,15vw,11.5rem)]">Irsyad</span>
-                    <V2Maskot priority className="h-auto w-[min(26vw,200px)] v2-float" />
+                    <V2Maskot priority className="h-auto w-[min(22vw,160px)] v2-float" />
                     <span className="font-v2-display font-black uppercase leading-[.82] text-v2-ink text-[clamp(3rem,15vw,11.5rem)]">Dimas</span>
                 </div>
 

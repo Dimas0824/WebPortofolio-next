@@ -226,7 +226,7 @@
   background: linear-gradient(180deg, #fcc93f 0%, #fbc02d 55%, #e8ae1c 100%);
   box-shadow: 0 10px 30px rgba(251, 192, 45, 0.10), inset 0 1px 0 rgba(255, 255, 255, 0.35);
 }
-.v2-root { --v2-zoom: 1.6; /* hover zoom scale */ --v2-hero-avatar-w: 260px; /* desktop hero avatar size — ganti manual untuk resize foto maskot */ }
+.v2-root { --v2-zoom: 1.6; /* hover zoom scale */ --v2-hero-avatar-w: 200px; /* desktop hero maskot wrap (tinggi ikut rasio foto 142x400) — ganti angka saja */ }
 .v2-hcard { position: relative; transition: transform .3s ease, box-shadow .3s ease; }
 .v2-hcard:hover, .v2-hcard:focus-visible { transform: translateY(-24px) scale(var(--v2-zoom)); box-shadow: 0 28px 56px rgba(0,0,0,.38); z-index: 10; }
 /* ponytail: scale besar ke-potong overflow scroll-reel; saat ada hover, reel dilepas jadi visible (keyboard focus ikut) */

@@ -21,7 +21,7 @@ export function NoiseLayer() {
 const MASKOT_SRC = "/images/v2/maskot.png";
 export function V2Maskot({ className = "", alt = "Maskot 3D Irsyad Dimas berdiri membawa laptop", priority = false, flip = false }: { className?: string; alt?: string; priority?: boolean; flip?: boolean }) {
     return (
-        <img src={MASKOT_SRC} alt={alt} width={466} height={834}
+        <img src={MASKOT_SRC} alt={alt} width={142} height={400}
             loading={priority ? "eager" : "lazy"}
             {...(priority ? { fetchPriority: "high" as const } : {})}
             className={`${className} ${flip ? "-scale-x-100" : ""}`} />
