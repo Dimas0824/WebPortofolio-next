@@ -10,14 +10,14 @@ export default function V2Hero() {
                 {/* DESKTOP: dua baris, satu avatar nge-bridge (IRS|YAD / DIM|AS). Mobile: stack lama yang di-approve. */}
                 <div aria-hidden className="relative mx-auto mt-6 hidden max-w-[980px] grid-cols-[1fr_auto_1fr] items-center gap-x-2 md:grid md:grid-rows-[auto_auto]">
                     <span className="self-end justify-self-end pb-[6vh] font-v2-display font-black uppercase leading-[.8] text-v2-ink text-[clamp(3.5rem,10.5vw,9.5rem)]">Irs</span>
-                    <V2Maskot priority className="z-10 row-span-2 self-center -my-6 h-auto w-[min(26vw,340px)] v2-float" />
+                    <V2Maskot priority className="z-10 row-span-2 self-center -my-4 h-auto w-[min(18vw,240px)] v2-float" />
                     <span className="self-end justify-self-start pb-[6vh] font-v2-display font-black uppercase leading-[.8] text-v2-ink text-[clamp(3.5rem,10.5vw,9.5rem)]">Yad</span>
                     <span className="self-start justify-self-end pt-[1vh] font-v2-display font-black uppercase leading-[.8] text-v2-ink text-[clamp(3.5rem,10.5vw,9.5rem)]">Dim</span>
                     <span className="self-start justify-self-start pt-[1vh] font-v2-display font-black uppercase leading-[.8] text-v2-ink text-[clamp(3.5rem,10.5vw,9.5rem)]">as</span>
                 </div>
                 <div aria-hidden className="flex flex-col items-center gap-2 md:hidden">
                     <span className="font-v2-display font-black uppercase leading-[.82] text-v2-ink text-[clamp(3rem,15vw,11.5rem)]">Irsyad</span>
-                    <V2Maskot priority className="h-auto w-[min(32vw,220px)] v2-float" />
+                    <V2Maskot priority className="h-auto w-[min(26vw,180px)] v2-float" />
                     <span className="font-v2-display font-black uppercase leading-[.82] text-v2-ink text-[clamp(3rem,15vw,11.5rem)]">Dimas</span>
                 </div>
 
