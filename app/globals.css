@@ -227,7 +227,7 @@
   box-shadow: 0 10px 30px rgba(251, 192, 45, 0.10), inset 0 1px 0 rgba(255, 255, 255, 0.35);
 }
 .v2-hcard { position: relative; transition: transform .3s ease, box-shadow .3s ease; }
-.v2-hcard:hover, .v2-hcard:focus-visible { transform: translateY(-6px) scale(1.03); box-shadow: 0 24px 48px rgba(0,0,0,.32); z-index: 10; }
+.v2-hcard:hover, .v2-hcard:focus-visible { transform: translateY(-8px) scale(1.05); box-shadow: 0 28px 56px rgba(0,0,0,.38); z-index: 10; }
 .v2-reveal { opacity: 0; transform: translateY(10px); transition: opacity .3s ease .04s, transform .3s ease .04s; pointer-events: none; }
 .v2-hcard:hover .v2-reveal, .v2-hcard:focus-within .v2-reveal, .v2-hcard:focus-visible .v2-reveal { opacity: 1; transform: translateY(0); pointer-events: auto; }
 @keyframes v2-shine { 0% { background-position: -140% 0; } 100% { background-position: 240% 0; } }

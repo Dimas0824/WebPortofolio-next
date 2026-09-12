@@ -5,7 +5,7 @@ function initials(title: string) { return title.split(/[\s\-—–()]+/).map((w)
 export default function WorkCard({ work, index, shot = null }: { work: PortfolioItem; index: number; shot?: string | null }) {
     return (
         <a href={work.link} target="_blank" rel="noopener noreferrer"
-            className="v2-hcard group block shrink-0 grow-0 basis-[78vw] snap-center rounded-[24px] border border-v2-hairline bg-v2-raised p-5 no-underline md:basis-[calc((100%-1.25rem)/2)]"
+            className="v2-hcard group block shrink-0 grow-0 basis-[78vw] snap-center rounded-[24px] border border-v2-hairline bg-v2-raised p-5 no-underline md:basis-[calc((100%-1.25rem)/2)] lg:basis-[calc((100%-2.5rem)/3)]"
             title={work.title}>
             <h3 className="sr-only">{work.title} — {work.category}. {work.description} Buka repositori di tab baru.</h3>
             <div className="flex items-start justify-between gap-2">
