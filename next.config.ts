@@ -13,6 +13,9 @@ function addSecurityHeaders(): Array<{
 }
 
 const nextConfig: NextConfig = {
+  // pin root: D:\MiniProject\package-lock.json (luar repo ini) bikin Next infer workspace-root ke folder parent
+  // -> `next start` nyari .next di parent (nggak ada) -> semua route 404. Ini permanent fix (disarankan Next sendiri).
+  outputFileTracingRoot: __dirname,
   async headers() {
     return [
       {
