@@ -28,7 +28,9 @@ export default function Image() {
           justifyContent: "center",
         }}
       >
-        <span style={{ fontSize: "80px", fontWeight: "900", color: "white" }}>ID</span>
+        <span style={{ fontSize: "80px", fontWeight: "900", color: "white" }}>
+          ID
+        </span>
       </div>
       <h1
         style={{
@@ -50,12 +52,12 @@ export default function Image() {
           letterSpacing: "-0.01em",
         }}
       >
-        Full-Stack Developer for Web Systems, Data, and Automation
+        Full-Stack Developer for Web Systems, Data, and AIoT
       </p>
     </div>,
     {
       width: 1200,
       height: 630,
-    }
+    },
   );
 }

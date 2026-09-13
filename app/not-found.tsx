@@ -14,7 +14,7 @@ export default function NotFound() {
       </p>
       <Link
         href="/"
-        className="v2-notch mt-10 bg-v2-coral px-8 py-4 font-v2-display text-xl font-black uppercase text-white"
+        className="v2-notch mt-10 bg-v2-coral px-8 py-4 font-v2-display text-xl font-black uppercase text-v2-canvas"
       >
         ← Balik ke beranda
       </Link>

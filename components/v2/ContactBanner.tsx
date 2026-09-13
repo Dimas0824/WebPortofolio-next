@@ -37,7 +37,7 @@ export default function ContactBanner() {
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
               <a
                 href={`mailto:${profile.contacts.email}?subject=Halo%20dari%20portofolio`}
-                className="v2-notch inline-flex items-center gap-2 bg-v2-coral px-8 py-3.5 font-v2-display text-lg font-black uppercase text-white transition-transform hover:-translate-y-0.5"
+                className="v2-notch inline-flex items-center gap-2 bg-v2-coral px-8 py-3.5 font-v2-display text-lg font-black uppercase text-v2-canvas transition-transform hover:-translate-y-0.5"
               >
                 <IconMail className="h-5 w-5" /> Kirim email{" "}
                 <span aria-hidden>↗</span>

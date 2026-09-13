@@ -361,6 +361,9 @@
     transparent 60%
   );
   background-size: 220% 100%;
+}
+.v2-hcard:hover .v2-shine,
+.v2-hcard:focus-within .v2-shine {
   animation: v2-shine 1.6s linear infinite;
 }
 @media (prefers-reduced-motion: reduce) {

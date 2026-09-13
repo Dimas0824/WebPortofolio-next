@@ -132,7 +132,7 @@ export default function AboutSection({ profile }: { profile: Profile }) {
                       FOCUS
                     </span>
                     <span className="text-v2-ink font-semibold tracking-wide">
-                      WEB &amp; AUTOMATION
+                      WEB &amp; AIoT
                     </span>
                   </div>
                   <div className="flex items-baseline justify-between border-b border-v2-hairline/40 pb-1.5">

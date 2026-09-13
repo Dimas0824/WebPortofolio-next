@@ -19,7 +19,7 @@ export default function V2Hero() {
 
         {/* Accessible Heading for SEO & Screen Readers */}
         <h1 className="sr-only">
-          Irsyad Dimas — Full-Stack Developer &amp; Data Automation Portfolio
+          Irsyad Dimas — Full-Stack Developer &amp; Data AIoT Portfolio
         </h1>
 
         {/* DESKTOP (lg and up): Bespoke Art Deco Interlocking Wordmark (IRSYAD [Bridge/Mascot] DIMAS) */}
@@ -89,7 +89,7 @@ export default function V2Hero() {
         <div className="flex flex-col sm:flex-row items-center gap-4 z-30 relative shrink-0 mt-4 lg:mt-[-70px] xl:mt-[-85px]">
           <a
             href="#kontak"
-            className="v2-notch inline-flex items-center justify-center gap-2 bg-v2-coral px-8 py-3.5 font-v2-display text-lg font-black uppercase text-white transition-all hover:brightness-110 hover:-translate-y-0.5 shadow-xl shadow-v2-coral/30 hover:shadow-2xl hover:shadow-v2-coral/45 w-full sm:w-auto"
+            className="v2-notch inline-flex items-center justify-center gap-2 bg-v2-coral px-8 py-3.5 font-v2-display text-lg font-black uppercase text-v2-canvas transition-all hover:brightness-110 hover:-translate-y-0.5 shadow-xl shadow-v2-coral/30 hover:shadow-2xl hover:shadow-v2-coral/45 w-full sm:w-auto"
           >
             Ngobrol <span aria-hidden="true">↗</span>
           </a>

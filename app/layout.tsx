@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import type React from "react";
 import "./globals.css";
-import Script from "next/script";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { Plus_Jakarta_Sans, Space_Mono } from "next/font/google";
 import localFont from "next/font/local";
 import profile from "../content/profile";
@@ -116,18 +116,7 @@ export default function RootLayout({
           }}
         />
         {/* GA4 */}
-        <Script
-          strategy="afterInteractive"
-          src="https://www.googletagmanager.com/gtag/js?id=G-V8REYLFVXT"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-V8REYLFVXT');
-          `}
-        </Script>
+        <GoogleAnalytics gaId="G-V8REYLFVXT" />
         {/* JSON-LD Structured Data */}
         <script
           type="application/ld+json"
