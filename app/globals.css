@@ -339,6 +339,16 @@
   box-shadow: 0 28px 56px rgba(0, 0, 0, 0.38);
   z-index: 10;
 }
+.v2-lockbar {
+  position: absolute;
+  top: -0.09em;
+  right: -0.015em;
+  left: -0.015em;
+  height: 0.115em;
+  background: currentColor;
+  border-radius: 0.03em;
+  pointer-events: none;
+}
 .v2-reveal {
   opacity: 0;
   transform: translateY(10px);
@@ -385,4 +395,20 @@
     transition: opacity 0.01ms;
     transform: none;
   }
+}
+/* label nested dlm .v2-stackrow (bukan sibling radio) => peer-* tak nyala; aturan ini pengganti peer-checked/focus */
+#stk-0:checked ~ .v2-stackrow label[for="stk-0"],
+#stk-1:checked ~ .v2-stackrow label[for="stk-1"],
+#stk-2:checked ~ .v2-stackrow label[for="stk-2"],
+#stk-3:checked ~ .v2-stackrow label[for="stk-3"] {
+  border-color: var(--color-v2-coral);
+  background: var(--color-v2-coral);
+  color: var(--color-v2-canvas);
+}
+#stk-0:focus-visible ~ .v2-stackrow label[for="stk-0"],
+#stk-1:focus-visible ~ .v2-stackrow label[for="stk-1"],
+#stk-2:focus-visible ~ .v2-stackrow label[for="stk-2"],
+#stk-3:focus-visible ~ .v2-stackrow label[for="stk-3"] {
+  outline: 2px solid var(--color-v2-sun);
+  outline-offset: 2px;
 }

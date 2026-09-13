@@ -10,28 +10,9 @@ build
 coverage
 .omo/
 
-# local agent tooling & debug scratch (delete when done)
+# local agent tooling & scratch (2026-09-13: scratch list dihapus bersama file-fisik-nya; glob jaga-jaga saja)
 .agent/
 .playwright-mcp/
 test-results/
-tsconfig.tsbuildinfo
-tmp.css
-css_debug.js
-cursor_analysis.js
-final_mobile.js
-final_test.js
-fresh_test.js
-hmr_test.js
-inspect.js
-inspect_cursor.js
-mobile_check.js
-mobile_test.js
-mq2.js
-mq_test.js
-reload_test.js
-tailwind_check.js
-tmp_desktop_test.js
-tmp_desktop_test.py
-verify-05-e2e.js
-verify_mobile.js
-test-carousel.ps1
+*.tsbuildinfo
+tmp_*
