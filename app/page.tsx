@@ -3,7 +3,6 @@ import { join } from "node:path";
 import profile from "@/content/profile";
 import { getExpertiseGroups, getWorks } from "@/lib/v2/data";
 import V2Hero from "@/components/v2/Hero";
-import MarqueeBand from "@/components/v2/MarqueeBand";
 import WorksReel from "@/components/v2/WorksReel";
 import StackSection from "@/components/v2/StackSection";
 import AboutSection from "@/components/v2/AboutSection";
@@ -16,7 +15,6 @@ export default function V2Page() {
     return (
         <main>
             <V2Hero />
-            <MarqueeBand items={profile.passion ?? []} />
             <WorksReel works={works} shots={shots} />
             <StackSection groups={getExpertiseGroups()} />
             <AboutSection profile={profile} />

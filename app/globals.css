@@ -209,19 +209,8 @@
     translate: 0 8px;
   }
 }
-@keyframes v2-marquee {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
 .v2-float {
   animation: v2-float 6s ease-in-out infinite;
-}
-.v2-marquee-track {
-  animation: v2-marquee 30s linear infinite;
 }
 
 .v2-root {
@@ -273,8 +262,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .v2-float,
-  .v2-marquee-track {
+  .v2-float {
     animation: none;
   }
 }
@@ -317,12 +305,6 @@
     );
 }
 /* semua layer alpha<=.12 dalam rentang canvas #14303B -8%..+9% luminance → lipatan silk almost-imperceptible (Rev1) */
-.v2-band {
-  background: linear-gradient(180deg, #fcc93f 0%, #fbc02d 55%, #e8ae1c 100%);
-  box-shadow:
-    0 10px 30px rgba(251, 192, 45, 0.1),
-    inset 0 1px 0 rgba(255, 255, 255, 0.35);
-}
 .v2-root {
   --v2-zoom: 1.2; /* hover zoom scale */
   --v2-hero-avatar-w: 300px; /* desktop hero maskot wrap (tinggi ikut rasio foto 142x400) — ganti angka saja */
