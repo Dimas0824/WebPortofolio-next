@@ -5,7 +5,50 @@
  */
 import type { PortfolioItem } from './types';
 
+const og = (repo: string) =>
+    `https://opengraph.githubassets.com/1/Dimas0824/${repo}`;
+
 export default [
+    {
+        title: "FloodWatch — Dashboard & Analytics",
+        description: "Dashboard IoT pemantauan banjir: Next.js, MQTT, Supabase, peta Leaflet, alert real-time, plus pipeline prediksi HDFS/Spark.",
+        tech: ["Next.js 16", "React 19", "TypeScript", "Tailwind 4", "Supabase", "MQTT", "Leaflet"],
+        link: "https://github.com/Dimas0824/floodwatch",
+        category: "Next.js",
+        image: og("floodwatch")
+    },
+    {
+        title: "FloodWatch — Simulator Digital Twin",
+        description: "Simulator Django peniru firmware FloodWatchV2 tanpa hardware: 7 skenario sensor, threshold dan hysteresis identik, telemetry ke AWS IoT Core.",
+        tech: ["Django", "Python", "SQLite", "MQTT", "AWS IoT Core"],
+        link: "https://github.com/Dimas0824/SimFLOODWATCHV2",
+        category: "Django",
+        image: og("SimFLOODWATCHV2")
+    },
+    {
+        title: "FloodWatch — ESP32 Firmware",
+        description: "Firmware ESP32-C6 (PlatformIO): sensor ultrasonik, klasifikasi status AMAN sampai BAHAYA, kontrol servo/relay/buzzer, web UI bawaan.",
+        tech: ["ESP32-C6", "C++", "PlatformIO", "FreeRTOS", "OLED", "MQTT"],
+        link: "https://github.com/Dimas0824/FloodWatchV2",
+        category: "Embedded",
+        image: og("FloodWatchV2")
+    },
+    {
+        title: "Invoice & Kwitansi Generator",
+        description: "Bikin invoice dan kwitansi dari satu sumber data: preview real-time, cetak PDF, ukuran kertas A5-Legal, warna brand, watermark.",
+        tech: ["Next.js", "React", "TypeScript", "Tailwind"],
+        link: "https://github.com/Dimas0824/invoicegenerator",
+        category: "Next.js",
+        image: og("invoicegenerator")
+    },
+    {
+        title: "PayTo — Sistem Kasir Toko",
+        description: "Sistem kasir (POS) untuk toko: transaksi penjualan, pembayaran multi-metode, refund dengan alur approval, dan manajemen stok. Laravel 11 + Inertia/React.",
+        tech: ["Laravel 11", "PHP", "Inertia.js", "React 19", "MySQL", "Tailwind 4"],
+        link: "https://github.com/Dimas0824/PayTo",
+        category: "Laravel 11",
+        image: og("PayTo")
+    },
     {
         title: "MAGNET — Sistem Informasi Magang",
         description: "Sistem informasi manajemen magang berbasis web yang dilengkapi algoritma rekomendasi cerdas untuk penempatan mahasiswa secara optimal. Mengimplementasikan metode ROC dan MULTIMOORA untuk optimasi multi-kriteria, sehingga proses pemetaan peserta magang menjadi lebih objektif dan efisien.",

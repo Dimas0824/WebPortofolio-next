@@ -3,6 +3,11 @@ import skillsData from "@/content/skills";
 import type { PortfolioItem, ExpertiseGroup } from "@/content/types";
 
 const CURATED = [
+    "FloodWatch — Dashboard & Analytics",
+    "FloodWatch — Simulator Digital Twin",
+    "FloodWatch — ESP32 Firmware",
+    "Invoice & Kwitansi Generator",
+    "PayTo — Sistem Kasir Toko",
     "MAGNET — Sistem Informasi Magang",
     "DiscipLink V2 — Secure MVC Refactor",
     "DiscipLink — Sistem Informasi Tata Tertib",
@@ -14,7 +19,7 @@ const CURATED = [
     "Sistem Kasir Cafe (CASS)",
 ];
 
-/** norm(): samakan U+2013/2014 vs "-", rapikan spasi — kurasi anti-roboh akibat copy-paste dash */
+/** norm(): samakan U+2013/2014 vs "-", rapikan spasi; kurasi anti-roboh akibat copy-paste dash */
 const norm = (s: string) => s.replace(/[\u2013\u2014]/g, "-").replace(/\s+/g, " ").trim().toLowerCase();
 
 export function getWorks(): PortfolioItem[] {

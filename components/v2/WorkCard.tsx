@@ -77,7 +77,7 @@ export default function WorkCard({
           </>
         )}
         <div className="v2-reveal absolute inset-x-0 bottom-0 z-20 overflow-hidden rounded-b-[16px] bg-gradient-to-t from-v2-canvas from-40% via-v2-canvas/92 to-transparent px-4 pb-4 pt-10">
-          <p className="text-sm leading-relaxed text-v2-muted">{work.description}</p>
+          <p className="line-clamp-3 md:line-clamp-5 text-sm leading-relaxed text-v2-muted">{work.description}</p>
           <span className="v2-shine mt-3 inline-flex items-center gap-2 rounded-full bg-v2-coral px-4 py-2 font-v2-display text-base font-black uppercase text-v2-canvas">
             View project <span aria-hidden>↗</span>
           </span>
