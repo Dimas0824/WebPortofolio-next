@@ -1,29 +1,11 @@
 "use client";
 
-import { useEffect } from "react";
-
-interface ErrorProps {
-  error: Error & { digest?: string };
-  reset: () => void;
-}
-
-export default function Error({ error, reset }: ErrorProps) {
-  useEffect(() => {
-    console.error("Application error:", error);
-  }, [error]);
-
-  return (
-    <div className="min-h-screen bg-[#FDFCFB] text-[#1A1A1A] flex items-center justify-center p-6">
-      <div className="max-w-md text-center space-y-6">
-        <h1 className="text-6xl font-black tracking-tighter text-[#1A1A1A]">Oops!</h1>
-        <p className="text-gray-500 font-medium">Something went wrong.</p>
-        <button
-          onClick={reset}
-          className="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-[#1A1A1A] text-white font-black uppercase tracking-widest text-xs hover:bg-[#F2C18D] hover:text-[#1A1A1A] transition-all shadow-lg"
-        >
-          Try Again
-        </button>
-      </div>
-    </div>
-  );
+export default function V2Error({ error, reset }: { error: Error & { digest?: string }; reset: () => void }) {
+    return (
+        <div className="flex min-h-[60vh] flex-col items-center justify-center px-6 py-24 text-center">
+            <p aria-hidden className="font-v2-display text-7xl font-black uppercase text-v2-coral">Nge-hang.</p>
+            <p className="mt-4 max-w-sm font-v2-mono text-sm text-v2-muted">{error.message || "Terjadi galat. Coba lagi."}</p>
+            <button onClick={reset} className="v2-notch mt-8 border border-v2-hairline px-8 py-4 font-v2-display text-lg font-bold uppercase text-v2-ink hover:bg-v2-ink hover:text-v2-canvas">Coba lagi</button>
+        </div>
+    );
 }
