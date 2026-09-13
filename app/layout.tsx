@@ -9,6 +9,7 @@ import { SITE_URL } from "@/lib/site-url";
 import V2Navbar from "@/components/v2/Navbar";
 import FooterV2 from "@/components/v2/FooterSectionV2";
 import { NoiseLayer } from "@/components/v2/ui";
+import { Analytics } from "@vercel/analytics/next";
 
 const displayName = "irsyad dimas";
 
@@ -130,6 +131,7 @@ export default function RootLayout({
           {children}
           <FooterV2 />
         </div>
+        <Analytics />
       </body>
     </html>
   );
