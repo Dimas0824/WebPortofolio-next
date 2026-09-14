@@ -83,11 +83,11 @@ export default [
     },
     {
         title: "DiscipLink V2 — Secure MVC Refactor",
-        description: "Refactor arsitektur DiscipLink dengan pola MVC + Central Router untuk memisahkan alur halaman, aksi, dan akses data. Fokus hardening keamanan: tokenisasi ID sensitif dengan session binding, idle timeout, dan whitelist upload/download.",
-        tech: ["PHP Native", "PDO", "MySQL", "MVC", "Vanilla JS", "Security"],
+        description: "Refactor DiscipLink dengan MVC + Central Router, lalu di-hardening: bcrypt + throttle login, CSRF, capability token terikat sesi (anti-IDOR), CSP, dan error fail-closed. Diverifikasi suite regresi keamanan (63 test) + pentest otomatis Strix — tidak ditemukan vuln yang dapat dieksploitasi.",
+        tech: ["PHP Native", "PDO", "MySQL", "MVC", "Security", "Pentest"],
         link: "https://github.com/Dimas0824/TataTertibMhsV2.git",
         category: "Security",
-        image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1200&q=80"
+        image: og("TataTertibMhsV2")
     },
     {
         title: "Oi!Kerjain — Daily Task Scheduler",
